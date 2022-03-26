@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="”en”">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Style.css">
+  </head>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+  <script>
+const firebaseConfig = {
+    apiKey: "AIzaSyApIR3TpcSsB5672oiqRGajFrpp8CJ4cTU",
+    authDomain: "arduino2022-2b87d.firebaseapp.com",
+    projectId: "arduino2022-2b87d",
+    storageBucket: "arduino2022-2b87d.appspot.com",
+    messagingSenderId: "689591413247",
+    appId: "1:689591413247:web:04a51e955e8d4ef0685fca",
+    measurementId: "G-17T162CP3G"
+  };
+
+firebase.initialseApp(firebaseConfig)
+
+  function ledOn(){
+      firebase.database().ref('Sala',set({estado:'LIGADA'}))
+  }
+
+  function ledOff(){
+      firebase.database().ref('Sala',set({estado:'DESLIGADA'}))
+  }
+
+  function ledOn1(){
+      firebase.database().ref('Sala',set({estado:'LIGADA'}))
+  }
+
+  function ledOff1(){
+      firebase.database().ref('Sala',set({estado:'DESLIGADA'}))
+  }
+
+  function ledOn2(){
+      firebase.database().ref('Sala',set({estado:'LIGADA'}))
+  }
+
+  function ledOff2(){
+      firebase.database().ref('Sala',set({estado:'DESLIGADA'}))
+  }
+
+</script>
+  <script src="app.js" defer></script>
+  <body>
+    <header>
+        <img src="foto.png" alt="Imagem" width="120px">
+        <h3>TME Education </h3>
+        <h3>Arduino Week 2022</h3>
+        <h3>Faculdade de engenharia UEM</h3><br>
+           
+    </header>
+
+    <div class="container">
+<p><h3>Controlo Remoto de Iluminacao</h3></p>   
+<fieldset >
+    <legend>Sala</legend>
+    <div>
+    <button class="led-on" onclick="ledOn()">Ligar</button>
+    <button class="led-off" onclick="ledOff()">Desligar</button>
+    </div>
+</fieldset>
+    
+<fieldset >
+        <legend>Quarto1</legend>
+        <div>
+        <button class="led-on" onclick="ledOn1()">Ligar</button>
+        <button class="led-off" onclick="ledOff1()">Desligar</button>
+        </div>
+    </fieldset>
+
+    <fieldset >
+            <legend>Quarto2</legend>
+            <div>
+            <button class="led-on" onclick="ledOn2()">Ligar</button>
+            <button class="led-off" onclick="ledOff2()">Desligar</button>
+            </div>
+        </fieldset>
+        <footer>
+            <p><strong>TEM Education Mozambique</strong></p>
+            <p><Strong>Created by MACHAIEIE,Elmo ; BANZE,Keite & VILANCULOS, Unicia</Strong></p>
+        </footer>
+
+    </div>
+   </body>
+</html>
